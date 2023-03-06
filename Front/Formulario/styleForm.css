@@ -1,0 +1,124 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para el cuerpo de la página */
+body {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.chartMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-bottom: solid 3px rgb(7, 40, 61);
+}
+.chartMenu p {
+    font-size: 16px;
+    background-color: rgb(7, 40, 61);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Estilos para el formulario */
+form {
+    margin: auto;
+    margin-top: 40px;
+    /* Centrar horizontalmente */
+    max-width: 600px;
+    /* Ancho máximo del formulario */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para las etiquetas de los campos */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="number"],
+input[type="color"] {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón de enviar */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+input[type="submit"]:active {
+    background-color: #3e8e41;
+}
+
+/* Estilos para los mensajes de error */
+input:invalid {
+    border-color: red;
+}
+
+input:invalid+span::before {
+    content: '✖ ';
+}
+
+input:valid+span::before {
+    content: '✓ ';
+}
+
+span {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+span::before {
+    display: none;
+}
+
+input:invalid+span {
+    color: red;
+}
+
+input:valid+span {
+    color: green;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.proceso-inputs {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario de procesos</title>
+    <link rel="stylesheet" href="styleForm.css" />
+</head>
+
+<body>
+    <div class="chartMenu">
+        <p class="tittle">ROUND ROBIN</p>
+    </div>
+
+    <form>
+        <h2>Planificación de procesos</h2>
+        <label for="quantum">Quantum:</label>
+        <input type="number" id="quantum" name="quantum" required><br><br>
+        <label for="num_procesos">Número de procesos:</label>
+        <input type="number" id="num_procesos" name="num_procesos" required><br><br>
+
+        <div id="procesos"></div>
+
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+    <script type="text/javascript" src="scriptForm.js"></script>
+</body>
+
+</html>

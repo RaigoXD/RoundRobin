@@ -1,6 +1,7 @@
 const form = document.querySelector("form");
 const procesosDiv = document.querySelector("#procesos");
 
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -26,12 +27,19 @@ form.addEventListener("submit", (event) => {
   // Enviar datos
   console.log(data);
 
-  // Limpiar campos
-  form.reset();
-  procesosDiv.innerHTML = "";
 
-  //redireccionar a la pagina de grafica
-  location.href = "../Grafica/grafica.html";
+  fetch('http://127.0.0.1:8000/roundRobin/process_algorithm',{
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {"Content-type": "application/json; charset=UTF-8"}
+  }).then(response => response.json())
+  .then(data => {
+    sessionStorage.setItem("data_to_draw", JSON.stringify(data));
+    form.reset();
+    procesosDiv.innerHTML = "";
+    //redireccionar a la pagina de grafica
+    location.href = "../Grafica/grafica.html";
+  })
 });
 
 // Agregar campos de proceso dinámicamente
@@ -72,3 +80,4 @@ function disminuirOpacidad(hexColor) {
   // Devolver el mismo color con una opacidad del 20%
   return `rgba(${r}, ${g}, ${b}, 0.2)`;
 }
+
